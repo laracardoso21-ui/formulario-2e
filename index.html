@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Formulário Místico</title>
+    <title>Formulário Cliníco</title>
 
     <style>
         /* =========================
            VARIÁVEIS DE CORES
         ========================== */
         :root {
-            --cor-principal: #6a0dad;
-            --cor-secundaria: #9c27b0;
-            --cor-destaque: #d8b4fe;
+            --cor-principal: #e084b7;
+            --cor-secundaria: #cc4c81;
+            --cor-destaque: #da5497;
 
-            --cor-fundo: #f5efff;
+            --cor-fundo: #f5d3ea;
             --cor-card: #ffffff;
 
             --cor-texto: #2d163b;
@@ -267,9 +267,9 @@
     ========================== -->
 
     <header id="inicio">
-        <h1>🔮 Formulário Modelo</h1>
+        <h1>Prontuário Médico Digital</h1>
 
-        <p>Exemplo dos principais campos de formulário do HTML</p>
+        <p>Registro de Atendimento e Evolução Clínica do Paciente </p>
     </header>
 
 
@@ -280,9 +280,9 @@
     <nav>
         <a href="#inicio">Início</a>
 
-        <a href="#formulario">Formulário</a>
+        <a href="#atendimento">Atendimento</a>
 
-        <a href="#contato">Contato</a>
+        <a href="#suporte">Suporte</a>
     </nav>
 
 
@@ -293,11 +293,10 @@
     <main>
 
         <section class="introducao">
-            <h2>Conhecendo os formulários HTML</h2>
+            <h2>Preenchimento de Ficha Clínica</h2>
 
             <p>
-                Nesta página podemos testar diferentes tipos de
-                campos utilizados em formulários HTML.
+               Insira as informações do paciente, sinais vitais e os detalhes do atendimento médico abaixo.
             </p>
         </section>
 
@@ -312,208 +311,54 @@
 
                 <fieldset>
 
-                    <legend>Dados pessoais</legend>
+                    <legend>Dados do Atendimento e Paciente</legend>
 
-
-                    <!-- TEXT -->
 
                     <div class="campo">
 
-                        <label for="nome">
-                            Nome:
+                        <label for="doctor-crm">
+                             Médico Responsável:
                         </label>
 
                         <input
                             type="text"
-                            id="nome"
-                            name="nome"
-                            placeholder="Digite seu nome"
+                            id="doctor-crm"
+                            name="doctor_crm"
+                            required
+                            placeholder="Ex: CRM"
                         >
 
                     </div>
 
 
-                    <!-- NUMBER -->
-
                     <div class="campo">
 
-                        <label for="idade">
-                            Idade:
+                        <label for="id">
+                            ID do Paciente:
                         </label>
 
                         <input
-                            type="number"
-                            id="idade"
-                            name="idade"
-                            min="0"
-                            max="120"
+                            type="text"
+                            id="id"
+                            name="id"
+                            required
+                            placeholder="Ex: 2026"
                         >
 
                     </div>
 
 
-                    <!-- EMAIL -->
-
                     <div class="campo">
 
-                        <label for="email">
-                            E-mail:
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="exemplo@email.com"
-                        >
-
-                    </div>
-
-
-                    <!-- PASSWORD -->
-
-                    <div class="campo">
-
-                        <label for="senha">
-                            Senha:
-                        </label>
-
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                        >
-
-                    </div>
-
-
-                    <!-- TEL -->
-
-                    <div class="campo">
-
-                        <label for="telefone">
-                            Telefone:
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="telefone"
-                            name="telefone"
-                            placeholder="(00) 00000-0000"
-                        >
-
-                    </div>
-
-
-                    <!-- URL -->
-
-                    <div class="campo">
-
-                        <label for="site">
-                            Site pessoal:
-                        </label>
-
-                        <input
-                            type="url"
-                            id="site"
-                            name="site"
-                            placeholder="https://meusite.com"
-                        >
-
-                    </div>
-
-                </fieldset>
-
-
-                <!-- =====================
-                     DATA E HORÁRIO
-                ====================== -->
-
-                <fieldset>
-
-                    <legend>Data e horário</legend>
-
-
-                    <!-- DATE -->
-
-                    <div class="campo">
-
-                        <label for="data">
-                            Data:
-                        </label>
-
-                        <input
-                            type="date"
-                            id="data"
-                            name="data"
-                        >
-
-                    </div>
-
-
-                    <!-- TIME -->
-
-                    <div class="campo">
-
-                        <label for="horario">
-                            Horário:
-                        </label>
-
-                        <input
-                            type="time"
-                            id="horario"
-                            name="horario"
-                        >
-
-                    </div>
-
-
-                    <!-- DATETIME LOCAL -->
-
-                    <div class="campo">
-
-                        <label for="dataHorario">
-                            Data e horário:
+                        <label for="date">
+                            Data e Hora do Atendimento:*
                         </label>
 
                         <input
                             type="datetime-local"
-                            id="dataHorario"
-                            name="dataHorario"
-                        >
-
-                    </div>
-
-
-                    <!-- MONTH -->
-
-                    <div class="campo">
-
-                        <label for="mes">
-                            Mês:
-                        </label>
-
-                        <input
-                            type="month"
-                            id="mes"
-                            name="mes"
-                        >
-
-                    </div>
-
-
-                    <!-- WEEK -->
-
-                    <div class="campo">
-
-                        <label for="semana">
-                            Semana:
-                        </label>
-
-                        <input
-                            type="week"
-                            id="semana"
-                            name="semana"
+                            id="attendance-date"
+                            name="attendance_date"
+                            required
                         >
 
                     </div>
@@ -521,260 +366,187 @@
                 </fieldset>
 
 
-                <!-- =====================
-                     ESCOLHAS
-                ====================== -->
-
                 <fieldset>
 
-                    <legend>Escolhas</legend>
+                    <legend>Sinais Vitais e Biometria</legend>
 
-
-                    <!-- RADIO -->
 
                     <div class="campo">
 
-                        <label>
-                            Turno:
+                        <label for="pressao">
+                            Pressão Arterial (mmHg):
                         </label>
 
-                        <div class="opcoes">
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="turno"
-                                    value="manha"
-                                >
-
-                                Manhã
-                            </label>
-
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="turno"
-                                    value="tarde"
-                                >
-
-                                Tarde
-                            </label>
-
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="turno"
-                                    value="noite"
-                                >
-
-                                Noite
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CHECKBOX -->
-
-                    <div class="campo">
-
-                        <label>
-                            Tecnologias que você conhece:
-                        </label>
-
-                        <div class="opcoes">
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="html"
-                                >
-
-                                HTML
-                            </label>
-
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="css"
-                                >
-
-                                CSS
-                            </label>
-
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="javascript"
-                                >
-
-                                JavaScript
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SELECT -->
-
-                    <div class="campo">
-
-                        <label for="curso">
-                            Escolha um curso:
-                        </label>
-
-                        <select
-                            id="curso"
-                            name="curso"
+                        <input
+                            type="text"
+                            id="pressao"
+                            name="pressao"
+                            placeholder="Ex: 120/80"
+                            pattern="\d{2,3}/\d{2,3}"
                         >
 
-                            <option value="">
-                                Selecione
-                            </option>
+                    </div>
 
-                            <option value="ds">
-                                Desenvolvimento de Sistemas
-                            </option>
 
-                            <option value="administracao">
-                                Administração
-                            </option>
+                    <div class="campo">
 
-                            <option value="informatica">
-                                Informática
-                            </option>
+                        <label for="heart-rate">
+                            Frequência Cardíaca (BPM):
+                        </label>
 
-                        </select>
+                        <input
+                            type="number"
+                            id="heart-rate"
+                            name="heart_rate"
+                            min="30"
+                            max="250"
+                            placeholder="72"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="temperatura">
+                            Temperatura Corporal (°C):
+                        </label>
+
+                        <input
+                            type="numero"
+                            id="temperatura"
+                            name="temperatura"
+                            min="30.0"
+                            max="45.0"
+                            step="0.1"
+                            placeholder="36.5"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="pain-level">
+                            Nível de Dor Declarado (0 a 10): <output id="pain-val">0</output>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="pain-level"
+                            name="pain_level"
+                            min="0"
+                            max="10"
+                            value="0"
+                            oninput="document.getElementById('pain-val').value = this.value"
+                        >
 
                     </div>
 
                 </fieldset>
 
 
-                <!-- =====================
-                     OUTROS CAMPOS
-                ====================== -->
-
                 <fieldset>
 
-                    <legend>Outros campos</legend>
+                    <legend>Evolução Clínica </legend>
 
-
-                    <!-- SEARCH -->
 
                     <div class="campo">
 
-                        <label for="pesquisa">
-                            Campo de pesquisa:
+                        <label for="relato">
+                            Queixa Principal e Relato do Paciente:
+                        </label>
+
+                        <textarea
+                            id="relato"
+                            name="relato"
+                            rows="4"
+                            required
+                            placeholder="Descreva as queixas e o histórico relatado pelo paciente..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="objetivo">
+                            Objetivo (Exame Físico e Achados Clínicos):*
+                        </label>
+
+                        <textarea
+                            id="objetivo"
+                            name="objetivo"
+                            rows="4"
+                            required
+                            placeholder="Descreva as observações do exame físico, exames, etc..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cid">
+                            Diagnóstico Principal:
                         </label>
 
                         <input
                             type="search"
-                            id="pesquisa"
-                            name="pesquisa"
-                            placeholder="Pesquisar..."
+                            id="cid"
+                            name="cid"
+                            list="cid-list"
+                            placeholder="Digite o nome da doença..."
                         >
+
+                        <datalist id="cid">
+                            <option value="J06.9 - Infecção aguda das vias aéreas superiores">
+                            <option value="I10 - Hipertensão essencial (primária)">
+                            <option value="E11 - Diabetes mellitus tipo 2">
+                            <option value="R51 - Cefaleia">
+                        </datalist>
 
                     </div>
 
 
-                    <!-- FILE -->
+                    <div class="campo">
+
+                        <label for="prescricao">
+                            Prescrição Médica e Recomendações:*
+                        </label>
+
+                        <textarea
+                            id="prescricao"
+                            name="prescricao"
+                            rows="5"
+                            required
+                            placeholder="Receituário, posologia de medicamentos e encaminhamentos..."
+                        ></textarea>
+
+                    </div>
+
 
                     <div class="campo">
 
                         <label for="arquivo">
-                            Selecione um arquivo:
+                            Anexar Exames ou Documentos (PDF/Imagem):
                         </label>
 
                         <input
                             type="file"
                             id="arquivo"
                             name="arquivo"
+                            accept=".pdf,.png,.jpg,.jpeg"
                         >
 
                     </div>
-
-
-                    <!-- COLOR -->
-
-                    <div class="campo">
-
-                        <label for="cor">
-                            Escolha uma cor:
-                        </label>
-
-                        <input
-                            type="color"
-                            id="cor"
-                            name="cor"
-                            value="#6a0dad"
-                        >
-
-                    </div>
-
-
-                    <!-- RANGE -->
-
-                    <div class="campo">
-
-                        <label for="nivel">
-                            Nível de satisfação:
-                        </label>
-
-                        <input
-                            type="range"
-                            id="nivel"
-                            name="nivel"
-                            min="0"
-                            max="10"
-                            value="5"
-                        >
-
-                    </div>
-
-
-                    <!-- TEXTAREA -->
-
-                    <div class="campo">
-
-                        <label for="mensagem">
-                            Mensagem:
-                        </label>
-
-                        <textarea
-                            id="mensagem"
-                            name="mensagem"
-                            rows="5"
-                            placeholder="Digite uma mensagem..."
-                        ></textarea>
-
-                    </div>
-
-
-                    <!-- HIDDEN -->
-
-                    <input
-                        type="hidden"
-                        name="codigo"
-                        value="FORM001"
-                    >
 
                 </fieldset>
 
 
-                <!-- =====================
-                     TERMOS
-                ====================== -->
-
                 <fieldset>
 
-                    <legend>Confirmação</legend>
+                    <legend>Confirmação e Termos (LGPD)</legend>
 
                     <div class="opcoes">
 
@@ -786,7 +558,7 @@
                                 required
                             >
 
-                            Aceito os termos de uso.
+                            Declaro que as informações e condutas médicas registradas estão corretas e em conformidade com a LGPD.
 
                         </label>
 
@@ -795,33 +567,23 @@
                 </fieldset>
 
 
-                <!-- =====================
-                     BOTÕES
-                ====================== -->
-
                 <div class="botoes">
-
-                    <!-- SUBMIT -->
 
                     <input
                         type="submit"
-                        value="Enviar"
+                        value="Salvar Prontuário"
                     >
 
-
-                    <!-- RESET -->
 
                     <input
                         type="reset"
-                        value="Limpar"
+                        value="Limpar Formulário"
                     >
 
 
-                    <!-- BUTTON -->
-
                     <input
                         type="button"
-                        value="Clique aqui"
+                        value="Verificar Sistema"
                         onclick="mostrarMensagem()"
                     >
 
@@ -834,32 +596,24 @@
     </main>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
-
     <footer id="contato">
 
         <p>
-            Exemplo de formulário HTML
+            Sistema de Prontuário Eletrônico Médico
         </p>
 
         <p>
-            Desenvolvido para fins educacionais
+            Desenvolvido por Lara Andrade
         </p>
 
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
     <script>
 
         function mostrarMensagem() {
 
-            alert("Você clicou no input do tipo button!");
+            alert("Sistema de Prontuário Conectado e Operacional.");
 
         }
 
